@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Dragon Ball Z</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Establece un fondo azul oscuro para toda la página */
+        body {
+            background-color: #1a1a40;
+            font-family: Sans-Serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor del blog */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Título principal */
+        .title-container {
+            background-color: #6678a0;
+            color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo de cada entrada */
+        .entry {
+            background-color: #6678a0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .entry:hover {
+            transform: scale(1.05);
+        }
+
+        .entry img {
+            max-width: 90%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .entry img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Título de las secciones */
+        .entry h2 {
+            color: #ffcc00;
+            font-size: 24px;
+        }
+
+        /* Estilos del formulario */
+        .form-container {
+            background-color: #6678a0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+        }
+        .form-container h2 {
+            color: #ffcc00;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            color: #ffcc00;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e6e6ff;
+            color: #1a1a40;
+        }
+        .form-container button {
+            background-color: #ffcc00;
+            color: #1a1a40;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-container button:hover {
+            background-color: #ffdb4d;
+        }
+
+        /* Estilos del footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <!-- Título principal del blog -->
+        <div class="title-container">
+            <h2>Blog de Dragon Ball Z</h2>
+            <p>Explora el mundo de Goku y sus amigos en sus aventuras épicas.</p>
+        </div>
+
+        <main>
+            <section class="descripcion">
+                <div class="entry">
+                    <center><img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/36bdc5ea4443cd8e42f22ec7d3884cbb.jpg" alt="Dragon Ball Z"></center>
+                    <h2>Sobre Dragon Ball Z</h2>
+                    <p>Dragon Ball Z sigue la historia de Son Goku, un Saiyajin que, en su vida adulta, defiende la Tierra de diversas amenazas. Después de casarse con Milk y tener un hijo llamado Son Gohan, Goku se enfrenta a su hermano mayor, Raditz, quien revela su origen Saiyajin y su intención de conquistar el planeta. Con la ayuda de su antiguo enemigo, Pikoro, Goku derrota a Raditz y se prepara para el enfrentamiento contra Vegeta, el Príncipe Saiyajin más poderoso. Tras vencer a Vegeta y enfrentar la advertencia sobre el malvado tirano Freezer, Gokū se embarca en un viaje a Namekusei en busca de las Esferas del Dragón para resucitar a sus amigos caídos, enfrentándose a poderosas fuerzas en una batalla que pondrá a prueba su fuerza y determinación. A medida que la serie avanza, Gokū y su hijo Gohan crecen tanto en poder como en sabiduría, enfrentándose a nuevos enemigos y desafíos que amenazan la paz de la Tierra</p>
+                    <p>Curiosidad: ¿Sabías que Goku originalmente iba a ser un personaje más oscuro? Su personalidad evoluciona en cada saga.</p>
+                </div>
+            </section>
+        
+            <section class="personajes">
+                <div class="entry">
+                    <h2>Personajes Principales</h2>
+                    <ul>
+                        <li><a href="goku.html">Goku</a></li>
+                        <li><a href="vegeta.html">Vegeta</a></li>
+                        <li><a href="piccolo.html">Piccolo</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Formulario para obtener datos del usuario -->
+            <section class="form-container">
+                <h2>¡Cuéntanos sobre ti!</h2>
+                <form action="enviar_datos.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="opinion">¿Te gusta nuestro blog?</label>
+                    <select id="opinion" name="opinion">
+                        <option value="si">Sí</option>
+                        <option value="no">No</option>
+                        <option value="regular">Regular</option>
+                    </select>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Elaborado por @YurFon</p>
+			<p>Informacion Tomada de Wikipedia</p>
+        </footer>
+    </div>
+</body>
+</html>
